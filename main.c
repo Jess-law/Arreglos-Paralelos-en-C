@@ -7,7 +7,7 @@ int cargaArreglos(int f, int leg[], char nom[][30], int an[]);
 void muestraArreglos(int v, int leg[], char nom[][30], int an[]);
 int busquedaPorLegajo (int v, int leg[], int busqueda);
 void RecibeTodosLosArreglosEImprime (int v, int leg[], int busqueda, char nombre[][COL], int anio[]);
-void MuestraTresArreglos(int v, int leg[], int busqueda, char nombre[][COL], int anio[]);
+
 
 int main()
 {
@@ -18,12 +18,12 @@ int main()
     int busqueda = 0;
     validos = cargaArreglos(FILAS, legajos, nombres, anios);
     muestraArreglos(validos, legajos, nombres, anios);
-    //busquedaPorLegajo(validos, legajos, busqueda);
-    //RecibeTodosLosArreglosEImprime(validos, legajos, busqueda, nombres, anios);
-    MuestraTresArreglos(validos, legajos, busqueda, nombres, anios);
+    busquedaPorLegajo(validos, legajos, busqueda);
+    RecibeTodosLosArreglosEImprime(validos, legajos, busqueda, nombres, anios);
+
     return 0;
 }
-///Crear una funciÛn que los cargue, hasta que el usuario lo decida.
+///Crear una funci√≥n que los cargue, hasta que el usuario lo decida.
 int cargaArreglos(int f, int leg[], char nom[][30], int an[])
 {
     char opcion = 0;
@@ -69,8 +69,8 @@ void muestraArreglos(int v, int leg[], char nom[][30], int an[])
     }
 
 }
-///Crear una funciÛn que busque dentro del
-/// arreglo de legajos y retorne la posiciÛn de un determinado valor.
+///Crear una funci√≥n que busque dentro del
+/// arreglo de legajos y retorne la posici√≥n de un determinado valor.
 
 int busquedaPorLegajo (int v, int leg[], int busqueda)
 {
@@ -93,9 +93,9 @@ int busquedaPorLegajo (int v, int leg[], int busqueda)
     return 0;
 }
 
-///Hacer una funciÛn que reciba como par·metro todos los arreglos
+///Hacer una funci√≥n que reciba como par√°metro todos los arreglos
 ///y encuentre el nombre correspondiente a un determinado legajo y lo imprima por pantalla.
-///Se debe invocar la funciÛn 2.
+///Se debe invocar la funci√≥n 2.
 
 void RecibeTodosLosArreglosEImprime (int v, int leg[], int busqueda, char nombre[][COL], int anio[])
 {
@@ -103,9 +103,9 @@ void RecibeTodosLosArreglosEImprime (int v, int leg[], int busqueda, char nombre
 
 }
 
-///Mostrar por pantalla los 3 arreglos pero de a un ìregistroî
-///o alumno por vez (es decir: muestra el legajo, nombre y aÒos del 1er alumno,
-///luego el legajo, nombre y aÒos del 2do alumno, y asÌ sucesivamente)..
+///Mostrar por pantalla los 3 arreglos pero de a un ‚Äúregistro‚Äù
+///o alumno por vez (es decir: muestra el legajo, nombre y a√±os del 1er alumno,
+///luego el legajo, nombre y a√±os del 2do alumno, y as√≠ sucesivamente)..
 void MuestraTresArreglos(int v, int leg[], int busqueda, char nombre[][COL], int anio[])
 {
     while(i<v)
